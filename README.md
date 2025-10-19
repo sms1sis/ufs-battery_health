@@ -5,10 +5,10 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 
 ---
 
-## Features
+## ✨ Features
 
 - 🔋 **Battery Info**
-  - Full Charge Capacity (µAh)
+  - Full Charge Capacity (mAh)
   - Cycle Count
   - Battery Health % (compared to design capacity)
 - 💾 **UFS Storage Health**
@@ -22,7 +22,7 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 
 ---
 
-## Compatibility
+## 📱 Compatibility
 
 - Designed for **Snapdragon SoC devices** with **UFS storage**.
 - Tested on:
@@ -38,13 +38,42 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 
 ---
 
-## Prerequisites
+## 📦 Requirements
 
 - **Termux** installed on your Android device
 - **Python 3.7+**
+- **tsu**
 - **Root access**
-  - In Termux, you can use [`tsu`](https://github.com/termux/termux-packages/wiki/tsu) for sudo permissions.
+
+---
+
+## 🚀 Usage
+- In Termux, you can use [`tsu`](https://github.com/termux/termux-packages/wiki/tsu) for sudo permissions.
 - Recommended to run with **sudo/tsu** for full access:
-  ```bash
-  tsu
-  python3 battery_ufs.py
+
+```bash
+ sudo python3 battery_ufs.py
+```
+
+## 🖥️ Example Output
+
+```
+================== Battery & UFS Status ==================
+
+🔋 Battery Info
+  → Full Charge Capacity: 4768000 µAh
+  → Cycle Count: 39
+  → Battery Health: 94%
+
+💾 UFS Health
+  → Life Time Estimation A: 70% remaining
+  → Life Time Estimation B: 90% remaining
+
+====================== Notes =====================
+  🟢 Life Time Estimation A: Tracks overall UFS health based on wear of LUN A (first memory unit).
+  🟢 Life Time Estimation B: Tracks overall UFS health based on wear of LUN B (second memory unit).
+  🔋 Battery Health %: Estimated remaining capacity compared to design capacity. Higher % = healthier battery.
+  ⚠ Colors indicate health status (Green=Good, Yellow=Moderate, Red=Poor).
+
+=====================================================
+```
