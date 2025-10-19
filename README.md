@@ -57,6 +57,8 @@ pkg update && pkg install python tsu
  sudo python3 battery_ufs.py
 ```
 
+---
+
 ## 🖥️ Example Output
 
 ```
