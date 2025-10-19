@@ -61,7 +61,7 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 ================== Battery & UFS Status ==================
 
 🔋 Battery Info
-  → Full Charge Capacity: 4768000 µAh
+  → Full Charge Capacity: 4768.0 mAh
   → Cycle Count: 39
   → Battery Health: 94%
 
