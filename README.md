@@ -44,7 +44,9 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 - **Python 3.7+**
 - **tsu**
 - **Root access**
-
+```bash
+pkg update && pkg install python tsu
+```
 ---
 
 ## 🚀 Usage
