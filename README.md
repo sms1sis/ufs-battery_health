@@ -65,8 +65,9 @@ pkg update && pkg install python tsu
 =================== Battery & UFS Status ===================
 
 🔋 Battery Info
-  ◆ Battery Capacity: 4768 / 5020 mAh (94%)
+  ◆ Battery Capacity: 4768 / 5020 mAh
   ◆ Cycle Count: 40
+  ◆ Battery Health: 94% remaining
 
 💾 UFS Health
   ◆ Life Time Estimation A: 70% remaining

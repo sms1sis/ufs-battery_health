@@ -100,7 +100,7 @@ def main():
             charge_design_mAh = int(charge_design_str) / 1000
             health_color = get_health_color(battery_health_percent)
             
-            print(f"  {CYAN}◆ Battery Capacity:{RESET} {health_color}{charge_now_mAh:.0f} / {charge_design_mAh:.0f} mAh ({battery_health_percent}%){RESET}")
+            print(f"  {CYAN}◆ Battery Capacity:{RESET} {YELLOW}{charge_now_mAh:.0f} / {charge_design_mAh:.0f} mAh{RESET}")
 
         except (ValueError, TypeError):
             print(f"  {CYAN}◆ Battery Capacity:{RESET} {RED}Invalid data{RESET}")
@@ -111,6 +111,12 @@ def main():
         print(f"  {CYAN}◆ Cycle Count:{RESET} {YELLOW}{cycle_count_str}{RESET}")
     else:
         print(f"  {CYAN}◆ Cycle Count:{RESET} {RED}Not found{RESET}")
+
+    if battery_health_percent is not None:
+        color = get_health_color(battery_health_percent)
+        print(f"  {CYAN}◆ Battery Health:{RESET} {color}{battery_health_percent}% remaining{RESET}")
+    else:
+        print(f"  {CYAN}◆ Battery Health:{RESET} {RED}Not found{RESET}")
 
 
     print(f"\n{BOLD}💾 UFS Health{RESET}")
