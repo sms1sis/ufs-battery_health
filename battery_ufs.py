@@ -91,53 +91,52 @@ def main():
             battery_health_percent = None
 
     # --- Print Output ---
-    print(f"{BOLD}{CYAN}================== Battery & UFS Status =================={RESET}\n")
+    print(f"{BOLD}{CYAN}=================== Battery & UFS Status ==================={RESET}\n")
 
     print(f"{BOLD}🔋 Battery Info{RESET}")
-    if charge_full_str:
+    if battery_health_percent is not None:
         try:
-            charge_mAh = int(charge_full_str) / 1000
-            print(f"  → Full Charge Capacity: {YELLOW}{charge_mAh:.0f} mAh{RESET}")
+            charge_now_mAh = int(charge_full_str) / 1000
+            charge_design_mAh = int(charge_design_str) / 1000
+            health_color = get_health_color(battery_health_percent)
+            
+            print(f"  {CYAN}◆ Battery Capacity:{RESET} {health_color}{charge_now_mAh:.0f} / {charge_design_mAh:.0f} mAh ({battery_health_percent}%){RESET}")
+
         except (ValueError, TypeError):
-            print(f"  → Full Charge Capacity: {RED}Invalid value{RESET}")
+            print(f"  {CYAN}◆ Battery Capacity:{RESET} {RED}Invalid data{RESET}")
     else:
-        print(f"  → Full Charge Capacity: {RED}Not found{RESET}")
+        print(f"  {CYAN}◆ Battery Capacity:{RESET} {RED}Not found{RESET}")
 
     if cycle_count_str:
-        print(f"  → Cycle Count: {YELLOW}{cycle_count_str}{RESET}")
+        print(f"  {CYAN}◆ Cycle Count:{RESET} {YELLOW}{cycle_count_str}{RESET}")
     else:
-        print(f"  → Cycle Count: {RED}Not found{RESET}")
+        print(f"  {CYAN}◆ Cycle Count:{RESET} {RED}Not found{RESET}")
 
-    if battery_health_percent is not None:
-        color = get_health_color(battery_health_percent)
-        print(f"  → Battery Health: {color}{battery_health_percent}%{RESET}")
-    else:
-        print(f"  → Battery Health: {RED}Not found{RESET}")
 
     print(f"\n{BOLD}💾 UFS Health{RESET}")
     if ufs_a_percent is not None:
         color = get_health_color(ufs_a_percent)
-        print(f"  → Life Time Estimation A: {color}{ufs_a_percent}% remaining{RESET}")
+        print(f"  {CYAN}◆ Life Time Estimation A:{RESET} {color}{ufs_a_percent}% remaining{RESET}")
     else:
-        print(f"  → Life Time Estimation A: {RED}Not found{RESET}")
+        print(f"  {CYAN}◆ Life Time Estimation A:{RESET} {RED}Not found{RESET}")
 
     if ufs_b_percent is not None:
         color = get_health_color(ufs_b_percent)
-        print(f"  → Life Time Estimation B: {color}{ufs_b_percent}% remaining{RESET}")
+        print(f"  {CYAN}◆ Life Time Estimation B:{RESET} {color}{ufs_b_percent}% remaining{RESET}")
     else:
-        print(f"  → Life Time Estimation B: {RED}Not found{RESET}")
+        print(f"  {CYAN}◆ Life Time Estimation B:{RESET} {RED}Not found{RESET}")
 
     # --- Notes ---
-    print(f"\n{BOLD}{MAGENTA}====================== Notes ======================{RESET}")
+    print(f"\n{BOLD}{MAGENTA}========================== Notes ==========================={RESET}")
     notes = [
-        "🟢 Life Time Estimation A/B: Tracks health of the two main UFS memory units.",
-        "🔋 Battery Health %: Estimated current capacity vs. design capacity.",
-        "⚠ Colors indicate health (Green=Good, Yellow=Moderate, Red=Poor)."
+    "🟢 Life Time Estimation A/B: Tracks health of the two main UFS memory units.",
+    "🔋 Battery Health %: Estimated current capacity vs. design capacity.",
+    "⚠ Colors indicate health (Green=Good, Yellow=Moderate, Red=Poor)."
     ]
     for note in notes:
-        print(f"  {note}")
+        print(f"{note}")
 
-    print(f"\n{BOLD}{CYAN}====================================================={RESET}")
+    print(f"\n{BOLD}{CYAN}============================================================{RESET}")
 
 if __name__ == "__main__":
     main()

@@ -62,22 +62,20 @@ pkg update && pkg install python tsu
 ## 🖥️ Example Output
 
 ```
-================== Battery & UFS Status ==================
+=================== Battery & UFS Status ===================
 
 🔋 Battery Info
-  → Full Charge Capacity: 4768.0 mAh
-  → Cycle Count: 39
-  → Battery Health: 94%
+  ◆ Battery Capacity: 4768 / 5020 mAh (94%)
+  ◆ Cycle Count: 40
 
 💾 UFS Health
-  → Life Time Estimation A: 70% remaining
-  → Life Time Estimation B: 90% remaining
+  ◆ Life Time Estimation A: 70% remaining
+  ◆ Life Time Estimation B: 90% remaining
 
-====================== Notes =====================
-  🟢 Life Time Estimation A: Tracks overall UFS health based on wear of LUN A (first memory unit).
-  🟢 Life Time Estimation B: Tracks overall UFS health based on wear of LUN B (second memory unit).
-  🔋 Battery Health %: Estimated remaining capacity compared to design capacity. Higher % = healthier battery.
-  ⚠ Colors indicate health status (Green=Good, Yellow=Moderate, Red=Poor).
+========================== Notes ===========================
+🟢 Life Time Estimation A/B: Tracks health of the two main UFS memory units.
+🔋 Battery Health %: Estimated current capacity vs. design capacity.
+⚠ Colors indicate health (Green=Good, Yellow=Moderate, Red=Poor).
 
-=====================================================
+============================================================
 ```
