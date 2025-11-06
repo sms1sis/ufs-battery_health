@@ -74,16 +74,16 @@ pkg update && pkg install python tsu
   ◆ Life Time Estimation B: 90% remaining
 
 ========================== Notes ===========================
-What are “Life Time Estimation A” and “B”?
+### 🤔 What are “Life Time Estimation A” and “B”?
 
-Your phone’s UFS chip has two health meters, labeled A and B.
+Your phone’s UFS storage has two health meters, A and B. While the exact technical details can vary by manufacturer, you can generally think of them this way:
 
->> A (Main storage health):
-This measures how healthy the main part of your storage is — where your apps, photos, and files are kept.
-When you install, delete, or update apps, this area wears down little by little.
+**>> A (Main storage health):**
+This often relates to the health of the main storage area where your 💾 apps, photos, and files are kept. This area wears down slowly with use.
 
->> B (System area health):
-This measures the hidden system part of the chip — used by your phone’s software to manage storage, cache, and boot data.
-Even though you don’t see it, this area also wears down as your phone works.
+**>> B (System area health):**
+This may relate to a separate, hidden area of storage that the phone's ⚙️ operating system uses for tasks like managing storage, caching, and booting up.
+
+Think of them as two different indicators of the overall health of your phone's internal storage.
 ============================================================
 ```
