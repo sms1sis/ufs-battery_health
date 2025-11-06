@@ -135,9 +135,8 @@ def main():
     # --- Notes ---
     print(f"\n{BOLD}{MAGENTA}========================== Notes ==========================={RESET}")
     notes = [
-    "🟢 Life Time Estimation A/B: Tracks health of the two main UFS memory units.",
-    "🔋 Battery Health %: Estimated current capacity vs. design capacity.",
-    "⚠ Colors indicate health (Green=Good, Yellow=Moderate, Red=Poor)."
+        "UFS storage has two health values, A and B, because manufacturers use different vendor-specific algorithms to estimate the lifespan.",
+        "Both values track the health of the main UFS memory units based on program/erase cycles, but they may represent different wear patterns or types of memory blocks."
     ]
     for note in notes:
         print(f"{note}")
