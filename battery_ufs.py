@@ -135,12 +135,20 @@ def main():
     # --- Notes ---
     print(f"\n{BOLD}{MAGENTA}========================== Notes ==========================={RESET}")
     notes = [
-        "UFS storage has two health values, A and B, because manufacturers use different vendor-specific algorithms to estimate the lifespan.",
-        "Both values track the health of the main UFS memory units based on program/erase cycles, but they may represent different wear patterns or types of memory blocks."
+        What are “Life Time Estimation A” and “B”?
+
+        Your phone’s UFS chip has two health meters, labeled A and B.
+
+        >> A (Main storage health):
+        This measures how healthy the main part of your storage is — where your apps, photos, and files are kept.
+        When you install, delete, or update apps, this area wears down little by little.
+
+        >> B (System area health):
+        This measures the hidden system part of the chip — used by your phone’s software to manage storage, cache, and boot data.
+        Even though you don’t see it, this area also wears down as your phone works.
     ]
     for note in notes:
         print(f"{note}")
-
     print(f"\n{BOLD}{CYAN}============================================================{RESET}")
 
 if __name__ == "__main__":
