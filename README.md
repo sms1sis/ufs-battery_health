@@ -44,9 +44,7 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 - **Python 3.7+**
 - **tsu**
 - **Root access**
-```bash
-pkg update && pkg install python tsu
-```
+
 ---
 
 ## 🚀 Usage
@@ -54,7 +52,10 @@ pkg update && pkg install python tsu
 - Recommended to run with **sudo/tsu** for full access:
 
 ```bash
- sudo python3 battery_ufs.py
+pkg update && pkg install python tsu git
+git clone https://github.com/sms1sis/ufs-battery_health.git
+cd ufs-battery_health
+sudo python3 battery_ufs.py
 ```
 
 ---
