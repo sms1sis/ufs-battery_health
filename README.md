@@ -52,7 +52,7 @@ It provides a **colorful, human-readable output** in Termux with detailed batter
 - Recommended to run with **sudo/tsu** for full access:
 
 ```bash
-pkg update && pkg install python tsu git
+pkg update && pkg install python tsu git -y
 git clone https://github.com/sms1sis/ufs-battery_health.git
 cd ufs-battery_health
 sudo python3 battery_ufs.py
